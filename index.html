@@ -3,16 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="https://kit.fontawesome.com/ad0e4b5002.js" crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/styles.css">
   <title>Rock, Paper, Scissors</title>
 </head>
 <body>
-  <header class="head">
-    <div class="header">
+  <div class="header">
+    <nav class="header">
       <h1 class="title">Rockin' papers with my scissors</h1>
+    </nav>
+  </div>
+  <div class="game-container">
+    <h2>Choose yours!</h2>
+    <div class="choices">
+      <a href="" class="choice-container">
+        <i class="fa-regular fa-hand-back-fist"></i>
+        <p>Rock</p>
+      </a>
+      <a href="" class="choice-container">
+        <i class="fa-regular fa-hand"></i>
+        <p>Paper</p>
+      </a>
+      <a href="" class="choice-container">
+        <i class="fa-regular fa-hand-scissors"></i>
+        <p>Scissors</p>
+      </a>
     </div>
-  </header>
-  
+    <p class="score-title">Score</p>
+    <div class="scoreboard">
+      <div class="points">
+        <p>User</p>
+        <p class="score">0</p>
+      </div>
+      <div class="points"> 
+        <p>CPU</p>
+        <p class="score">0</p>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <p>Alfredo Clark 2022</p>
+  </footer>
 </body>
-<script src="/src/script.js"></script>
+<!--<script src="/src/script.js"></script>-->
 </html>
