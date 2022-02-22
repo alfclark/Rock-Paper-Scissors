@@ -67,21 +67,19 @@ a{
   border: .2rem solid black;
   color:#fff;
   font-size: 3rem;
+  cursor: pointer;
 }
 
 .choice-container:hover {
   transform: scale(1.1);
   color: green;
   transition: .4s;
+  cursor: pointer;
 }
 
 .fa-regular {
   padding-top: 30px;
   font-size: 5rem;
-}
-
-.scoreboard { 
-  margin-top: -30px;
 }
 
 .score-title {
@@ -91,16 +89,12 @@ a{
   font-weight: 600;
 }
 
-.points {
+.scoreboard { 
+  margin-top: -30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   color: green;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  vertical-align: middle; 
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
-.score {
-  padding-left: 20px;
-}
