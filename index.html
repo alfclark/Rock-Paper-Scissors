@@ -17,34 +17,30 @@
   <div class="game-container">
     <h2>Choose yours!</h2>
     <div class="choices">
-      <a href="" class="choice-container">
+      <a id="rock" class="choice-container" data-selection="rock">
         <i class="fa-regular fa-hand-back-fist"></i>
         <p>Rock</p>
       </a>
-      <a href="" class="choice-container">
+      <a id="paper" class="choice-container" data-selection="paper">
         <i class="fa-regular fa-hand"></i>
         <p>Paper</p>
       </a>
-      <a href="" class="choice-container">
+      <a id="scissors" class="choice-container" data-selection="scissors">
         <i class="fa-regular fa-hand-scissors"></i>
         <p>Scissors</p>
       </a>
     </div>
     <p class="score-title">Score</p>
     <div class="scoreboard">
-      <div class="points">
-        <p>User</p>
-        <p class="score">0</p>
-      </div>
-      <div class="points"> 
-        <p>CPU</p>
-        <p class="score">0</p>
-      </div>
+      <div class="scoreboard__name">PC</div>
+      <div class="scoreboard__name">User</div>
+      <span class="scoreboard__score" pc-score>0</span>
+      <span class="scoreboard__score" user-score>0</span>
     </div>
   </div>
   <footer class="footer">
-    <p>Alfredo Clark 2022</p>
+    <p>Alfredo Clark © 2022</p>
   </footer>
 </body>
-<!--<script src="/src/script.js"></script>-->
+<script src="/src/script.js"></script>
 </html>
