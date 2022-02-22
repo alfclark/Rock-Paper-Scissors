@@ -1,37 +1,59 @@
-var userChoice;
-var cpuChoice;
 var choices = ['rock', 'paper', 'scissors'];
-var userScore = 0;
-var computerScore = 0;
+let cpuScore = 0;
+let playerScore =0;
+const selectionButtons = document.querySelectorAll('[data-selection]');
 
-function round(){
-  var userChoice = prompt('What do you choose?').toLowerCase();
+selectionButtons.forEach(selectionButton => {
+  selectionButton.addEventListener('click', e => {
+    const selectionName = selectionButton.dataset.selection;
+    round(selectionName);
+  })
+})
+
+function cpuSelection(){
   var cpuChoice = choices[(Math.random() * choices.length) | 0];
+  return cpuChoice;
+}
+
+
+function round(selection){
+  var userChoice = selection;
+  var cpuChoice = cpuSelection();
   console.log("You chose: " + userChoice);
   console.log('The PC chose: ' + cpuChoice);
-  if ((userChoice === 'paper' && cpuChoice ==='scissors') || (userChoice === 'rock' && cpuChoice === 'paper') || (userChoice === 'scissors' && cpuChoice === 'rock')){
+  if (
+    (userChoice === 'paper' && cpuChoice ==='scissors') || 
+    (userChoice === 'rock' && cpuChoice === 'paper') || 
+    (userChoice === 'scissors' && cpuChoice === 'rock')
+    ){
     console.log('Point for the PC!')
-    computerScore++;
+    cpuScore++;
   }
-  else if ((userChoice === 'paper' && cpuChoice === 'rock') || (userChoice === 'rock' && cpuChoice=== 'scissors') || (userChoice === 'scissors' && cpuChoice === 'paper')){
+  else if (
+    (userChoice === 'paper' && cpuChoice === 'rock') || 
+    (userChoice === 'rock' && cpuChoice=== 'scissors') || 
+    (userChoice === 'scissors' && cpuChoice === 'paper')
+    ){
     console.log('Point for you!')
-    userScore++;
+    playerScore++;
   }
   else{
     console.log('No points!')
   }
+  console.log('You have: ' + playerScore + ' points.');
+  console.log('PC has: ' + cpuScore + ' points.');
 }
 
+/*
 function game(){
   for (let i = 0; i < 5; i++) {
-    round();
-    console.log('You have: ' + userScore + ' points.');
-    console.log('PC has: ' + computerScore + ' points.');
+    console.log('You have: ' + playerScore + ' points.');
+    console.log('PC has: ' + cpuScore + ' points.');
   }
-  if (userScore === computerScore){
+  if (cpuScore === playerScore){
     console.log('Is a tie!')
   }
-  else if(userScore < computerScore){
+  else if(playerScore < cpuScore){
     console.log('You lost!')
   }
   else {
@@ -39,5 +61,5 @@ function game(){
   }
 }
 
-game();
-
+game(); 
+*/
