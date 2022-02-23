@@ -1,14 +1,28 @@
 var choices = ['rock', 'paper', 'scissors'];
-let cpuScore = 0;
-let playerScore =0;
+var cpuScore;
+var playerScore;
 const selectionButtons = document.querySelectorAll('[data-selection]');
 
-selectionButtons.forEach(selectionButton => {
-  selectionButton.addEventListener('click', e => {
-    const selectionName = selectionButton.dataset.selection;
-    round(selectionName);
-  })
-})
+function game(){
+  let cpuScore = 0;
+  let playerScore = 0;
+  if (cpuScore < 5 && playerScore < 5) {
+    selectionButtons.forEach(selectionButton => {
+      selectionButton.addEventListener('click', e => {
+        const selectionName = selectionButton.dataset.selection;
+        round(selectionName);
+      })
+    })
+  }
+  else if(playerScore === 5){
+    console.clear();
+    console.log('You won!')
+  }
+  else if(cpuScore === 5){
+    console.clear();
+    console.log('CPU won!')
+  }
+}
 
 function cpuSelection(){
   var cpuChoice = choices[(Math.random() * choices.length) | 0];
@@ -60,6 +74,6 @@ function game(){
     console.log('You won!')
   }
 }
-
-game(); 
 */
+game(); 
+
