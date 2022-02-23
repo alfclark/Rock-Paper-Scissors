@@ -34,13 +34,19 @@
     <div class="scoreboard">
       <div class="scoreboard__name">PC</div>
       <div class="scoreboard__name">User</div>
-      <span class="scoreboard__score" pc-score>0</span>
-      <span class="scoreboard__score" user-score>0</span>
+      <p class="pc-score">0</p>
+      <p class="user-score">0</p>
+    </div>
+  </div>
+  <div id="game-over" class="restart">
+    <div class="message">
+      <h1 class="status">Game is over</h1>
+      <button onclick="window.location.reload();">Restart Game</button>
     </div>
   </div>
   <footer class="footer">
     <p>Alfredo Clark © 2022</p>
   </footer>
 </body>
-<script src="/src/script.js"></script>
+<script src="/src/app.js" defer></script>
 </html>
