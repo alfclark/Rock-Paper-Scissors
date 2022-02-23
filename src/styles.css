@@ -98,3 +98,45 @@ a{
   font-weight: 700;
 }
 
+.restart {
+  z-index: 4;
+  position: fixed;
+  background: rgba(32, 32, 32, 0.664);
+  color: green;
+  padding: 30px;  
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: center;
+  display: none;
+}
+
+
+.message {
+  background-color: rgba(0, 0, 0, 0.521);
+  border-radius: 15px;
+  border: .2rem solid black;
+  padding: 70px;
+}
+.restart button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.restart button:hover{
+  background-color: grey;
+  transition: .5s;
+  transform: scale(1.1);
+  color: black;
+}
