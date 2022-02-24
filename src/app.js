@@ -30,7 +30,7 @@ function game(){
   function compare(userChoice, cpuChoice){
     var x = document.getElementById('game-over');
     if(userScore === 5 || cpuScore === 5){
-      x.style.display === 'block';
+      x.style.display === 'block';c
     }
     //Check for a tie
     if(userChoice === cpuChoice){
