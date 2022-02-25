@@ -80,7 +80,5 @@ function game(){
   match();
 }
 
-
-
 //Function to start the game
 game();
