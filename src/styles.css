@@ -6,6 +6,9 @@ html {
 
 /* ANIMATIONS */
 
+body{
+  background-color: rgb(58, 58, 58);
+}
 
 .header{
   top: 0;
@@ -15,8 +18,8 @@ html {
   display: block;
   text-align: center;
   overflow: hidden;
-  background-color: rgb(37, 36, 36);
   color: green;
+  background-color: rgb(37, 36, 36);
   z-index: 2;
 }
 
@@ -37,10 +40,9 @@ a{
 .game-container {
   margin-top: auto;
   padding-top: 30px;
-  background-color: rgb(58, 58, 58);
   width: 100%;
   height: 100%;
-  position: fixed;
+  position: relative;
   left: 0;
   text-align: center;
   align-items: center;
@@ -95,6 +97,7 @@ a{
   color: green;
   font-size: 1.5rem;
   font-weight: 700;
+  position: relative;
 }
 
 footer {
@@ -109,26 +112,24 @@ footer {
 
 .restart {
   z-index: 4;
-  position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
   background: rgba(32, 32, 32, 0.664);
   color: green;
-  padding: 30px;  
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  vertical-align: middle;
-  justify-content: center;
   display: none;
+  align-items: center;
+  justify-content: center;
 }
 
 .message {
   background-color: rgba(0, 0, 0, 0.521);
-  border-radius: 15px;
   border: .2rem solid black;
   padding: 70px;
+  align-items: center;
+  justify-content: center;
 }
 .restart button {
   background-color: #4CAF50; /* Green */
@@ -147,4 +148,29 @@ footer {
   transition: .5s;
   transform: scale(1.1);
   color: black;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 900px) {
+  .fa-regular {
+    padding-top: 30px;
+    font-size: 2rem;
+  }
+  .choice-container {
+    padding: 30px;
+    margin: 10px;
+    width: 5rem;
+    background-color: rgba(0, 0, 0, 0.521);
+    border-radius: 15px;
+    border: .2rem solid black;
+    color:#fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .score-title {
+    font-size: 1.2rem;
+  }
+  .scoreboard { 
+    font-size: 1rem;
+  }
 }
