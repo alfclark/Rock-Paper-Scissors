@@ -4,6 +4,9 @@ html {
   text-align: center;
 }
 
+/* ANIMATIONS */
+
+
 .header{
   top: 0;
   right: 0;
@@ -17,19 +20,14 @@ html {
   z-index: 2;
 }
 
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: rgb(37, 36, 36);
-  color: green;
-  text-align: center;
-}
-
 h2 {
   color: white;
-  font-size: 4rem;
+  font-size: 2.5rem;
+}
+
+.move {
+  color: white;
+  font-size: 1.5rem;
 }
 
 a{
@@ -51,6 +49,7 @@ a{
 }
 
 .choices {
+  padding-top: 1rem;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -96,6 +95,16 @@ a{
   color: green;
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(37, 36, 36);
+  color: green;
+  text-align: center;
 }
 
 .restart {
