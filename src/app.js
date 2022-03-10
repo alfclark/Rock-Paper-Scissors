@@ -3,6 +3,7 @@ function game(){
   let userScore = 0;
   let cpuScore = 0;
   var x = document.getElementById("game-over");
+
   function match(){
     const options = document.querySelectorAll('[data-selection]'); //reads data-selection tags from HTML
     const choices = ['rock', 'paper', 'scissors']; //array for choices for PC
@@ -26,26 +27,41 @@ function game(){
     computerScore.textContent = cpuScore;
   }
 
+  function status(){
+    var restart = document.querySelector('.restart');
+    var winner = document.querySelector('.winner');
+    if(userScore === 5){
+      restart.style.display = 'block';
+      winner.textContent = 'User Wins!';
+    }
+    else if(cpuScore === 5){
+      restart.style.display = 'block';
+      winner.textContent = 'PC Wins!';
+    }
+  }
+
   //Function to compare user and CPU selection
   function compare(userChoice, cpuChoice){
-    var x = document.getElementById('game-over');
-    if(userScore === 5 || cpuScore === 5){
-      x.style.display === 'block';c
-    }
-    //Check for a tie
+    let move = document.querySelector('.move');
+      //Check for a tie
     if(userChoice === cpuChoice){
+      move.textContent = 'No Points!';
       return;
     }
     //Check for rock
     if(userChoice === 'rock'){
       if(cpuChoice === 'scissors'){
         userScore++;
+        move.textContent = 'Point for User!';
         score();
+        status();
         return;
       }
       else{
         cpuScore++;
+        move.textContent = 'Point for PC!';
         score();
+        status();
         return;
       }
     }
@@ -53,12 +69,16 @@ function game(){
     if(userChoice === 'paper'){
       if(cpuChoice === 'rock'){
         userScore++;
+        move.textContent = 'Point for User!';
         score();
+        status();
         return;
       }
       else{
         cpuScore++;
+        move.textContent = 'Point for PC!';
         score();
+        status();
         return;
       }
     }
@@ -66,17 +86,20 @@ function game(){
     if(userChoice === 'scissors'){
       if(cpuChoice === 'paper'){
         userScore++;
+        move.textContent = 'Point for User!';
         score();
+        status();
         return;
       }
       else{
         cpuScore++;
+        move.textContent = 'Point for PC!';
         score();
+        status();
         return;
       }
     }
-    
-  }
+    }
   match();
 }
 
