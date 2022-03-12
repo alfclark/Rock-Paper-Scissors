@@ -39,30 +39,53 @@ function game(){
       winner.textContent = 'PC Wins!';
     }
   }
+  //Printing move result
+  function pointCPU(){
+    let move = document.querySelector('.move');
+    move.textContent = 'Point for PC!';
+    move.style.opacity = 1;
+    setTimeout(function(){
+      move.style.opacity = 0;
+    },500)
+  }
+
+  function pointUser(){
+    let move = document.querySelector('.move');
+    move.textContent = 'Point for User!';
+    move.style.opacity = 1;
+    setTimeout(function(){
+      move.style.opacity = 0;
+    },500)
+  }
+
+  function noPoints(){
+    let move = document.querySelector('.move');
+    move.textContent = 'No Points!';
+    move.style.opacity = 1;
+    setTimeout(function(){
+      move.style.opacity = 0;
+    },500)
+  }
 
   //Function to compare user and CPU selection
   function compare(userChoice, cpuChoice){
-    let move = document.querySelector('.move');
       //Check for a tie
     if(userChoice === cpuChoice){
-      move.textContent = 'No Points!';
-      move.style.opacity = 1;
+      noPoints();
       return;
     }
     //Check for rock
     if(userChoice === 'rock'){
       if(cpuChoice === 'scissors'){
         userScore++;
-        move.textContent = 'Point for User!';
-        move.style.opacity = 1;
+        pointUser();
         score();
         status();
         return;
       }
       else{
         cpuScore++;
-        move.textContent = 'Point for PC!';
-        move.style.opacity = 1;
+        pointCPU();
         score();
         status();
         return;
@@ -72,16 +95,14 @@ function game(){
     if(userChoice === 'paper'){
       if(cpuChoice === 'rock'){
         userScore++;
-        move.textContent = 'Point for User!';
-        move.style.opacity = 1;
+        pointUser();
         score();
         status();
         return;
       }
       else{
         cpuScore++;
-        move.textContent = 'Point for PC!';
-        move.style.opacity = 1;
+        pointCPU();
         score();
         status();
         return;
@@ -91,16 +112,14 @@ function game(){
     if(userChoice === 'scissors'){
       if(cpuChoice === 'paper'){
         userScore++;
-        move.textContent = 'Point for User!';
-        move.style.opacity = 1;
+        pointUser();
         score();
         status();
         return;
       }
       else{
         cpuScore++;
-        move.textContent = 'Point for PC!';
-        move.style.opacity = 1;
+        pointCPU();
         score();
         status();
         return;
