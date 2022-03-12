@@ -46,6 +46,7 @@ function game(){
       //Check for a tie
     if(userChoice === cpuChoice){
       move.textContent = 'No Points!';
+      move.style.opacity = 1;
       return;
     }
     //Check for rock
@@ -53,6 +54,7 @@ function game(){
       if(cpuChoice === 'scissors'){
         userScore++;
         move.textContent = 'Point for User!';
+        move.style.opacity = 1;
         score();
         status();
         return;
@@ -60,6 +62,7 @@ function game(){
       else{
         cpuScore++;
         move.textContent = 'Point for PC!';
+        move.style.opacity = 1;
         score();
         status();
         return;
@@ -70,6 +73,7 @@ function game(){
       if(cpuChoice === 'rock'){
         userScore++;
         move.textContent = 'Point for User!';
+        move.style.opacity = 1;
         score();
         status();
         return;
@@ -77,6 +81,7 @@ function game(){
       else{
         cpuScore++;
         move.textContent = 'Point for PC!';
+        move.style.opacity = 1;
         score();
         status();
         return;
@@ -87,6 +92,7 @@ function game(){
       if(cpuChoice === 'paper'){
         userScore++;
         move.textContent = 'Point for User!';
+        move.style.opacity = 1;
         score();
         status();
         return;
@@ -94,6 +100,7 @@ function game(){
       else{
         cpuScore++;
         move.textContent = 'Point for PC!';
+        move.style.opacity = 1;
         score();
         status();
         return;
