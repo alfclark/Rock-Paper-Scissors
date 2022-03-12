@@ -5,6 +5,34 @@ html {
 }
 
 /* ANIMATIONS */
+@keyframes heartbeat {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+
+  10% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
+
+  17% {
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
+  }
+
+  33% {
+    animation-timing-function: ease-in;
+    transform: scale(0.87);
+  }
+
+  45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+}
+
 
 body{
   background-color: rgb(58, 58, 58);
@@ -31,6 +59,8 @@ h2 {
 .move {
   color: white;
   font-size: 1.5rem;
+  opacity: 0;
+  transition: .3s;
 }
 
 a{
@@ -131,6 +161,11 @@ footer {
   align-items: center;
   justify-content: center;
 }
+
+.restart h2{
+  animation: heartbeat 2s ease 0s infinite normal forwards;
+}
+
 .restart button {
   background-color: #4CAF50; /* Green */
   border: none;
